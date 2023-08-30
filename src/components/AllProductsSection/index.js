@@ -126,7 +126,7 @@ class AllProductsSection extends Component {
     }
   }
 
-  renderLoader = () => (
+  renderLoaderView = () => (
     <div className="products-loader-container">
       <Loader type="ThreeDots" color="#0b69ff" height="50" width="50" />
     </div>
@@ -193,7 +193,7 @@ class AllProductsSection extends Component {
       case apiStatusConstants.failure:
         return this.renderFailureView()
       case apiStatusConstants.inProgress:
-        return this.renderLoadingView()
+        return this.renderLoaderView()
       default:
         return null
     }
